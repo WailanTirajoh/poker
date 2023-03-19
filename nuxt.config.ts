@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["nuxt-vuefire", "@nuxtjs/tailwindcss"],
-
+  css: ["~/assets/style.css"],
   vuefire: {
     auth: true,
     config: {
@@ -11,6 +11,18 @@ export default defineNuxtConfig({
       storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
       messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
       appId: process.env.FIREBASE_APP_ID,
+    },
+  },
+  buildModules: ["@nuxtjs/google-fonts"],
+  googleFonts: {
+    families: {
+      Roboto: true,
+      "Josefin+Sans": true,
+      Lato: [100, 300],
+      Raleway: {
+        wght: [100, 400],
+        ital: [100],
+      },
     },
   },
 });

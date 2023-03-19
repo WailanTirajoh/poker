@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@firebase/app-types': ^0.9.0
+  '@nuxtjs/google-fonts': ^3.0.0
   '@nuxtjs/tailwindcss': ^6.6.0
   firebase: ^9.18.0
   firebase-admin: ^11.5.0
@@ -11,6 +12,7 @@ specifiers:
 
 dependencies:
   '@firebase/app-types': 0.9.0
+  '@nuxtjs/google-fonts': 3.0.0
   firebase: 9.18.0
   firebase-admin: 11.5.0
   nuxt-vuefire: 0.1.6_f7g6j34w2j52yxqi4k3f226zja
@@ -1955,6 +1957,17 @@ packages:
       - vue-tsc
     dev: true
 
+  /@nuxtjs/google-fonts/3.0.0:
+    resolution: {integrity: sha512-knP2CJFkMHGQ9pepVNwquXvqiIHDma/6yZNXiYk7WWatRbbQUPf2423vXiBYu267Mff2KMuDLoAJ1Dsv2ymhdQ==}
+    dependencies:
+      '@nuxt/kit': 3.3.1
+      google-fonts-helper: 3.2.4
+      pathe: 1.1.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: false
+
   /@nuxtjs/tailwindcss/6.6.0:
     resolution: {integrity: sha512-lzUicI2LM6gCbgTkdOJN4HSOXNCWi+fosKzBnB2Z/M+sJxSHDXV1OosuQkDDJEzyJUtzTU0tvk1I7ij20JZVOw==}
     dependencies:
@@ -3379,7 +3392,6 @@ packages:
   /deepmerge/4.3.1:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /defaults/1.0.4:
     resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
@@ -4189,6 +4201,15 @@ packages:
       - supports-color
     dev: false
     optional: true
+
+  /google-fonts-helper/3.2.4:
+    resolution: {integrity: sha512-M740UjqBOxmG2qFUW7Lhgak9WDpsT18zxLJuG+MP4r+G1vhqbWm3x3D40xFEzhveQAneaEr8WjPxf+vcx9Xohg==}
+    dependencies:
+      deepmerge: 4.3.1
+      hookable: 5.5.1
+      ofetch: 1.0.1
+      ufo: 1.1.1
+    dev: false
 
   /google-gax/3.5.8:
     resolution: {integrity: sha512-bkqxv7YdYP3FGh+dywvgyctj8XM07toJ/JCWwAkmmE15QTt3ieF/f7Hpz7xG85+dGmZtQR8Y+yMo0ENFmhypNA==}
@@ -5505,7 +5526,6 @@ packages:
       destr: 1.2.2
       node-fetch-native: 1.0.2
       ufo: 1.1.1
-    dev: true
 
   /ohash/1.0.0:
     resolution: {integrity: sha512-kxSyzq6tt+6EE/xCnD1XaFhCCjUNUaz3X30rJp6mnjGLXAAvuPFqohMdv0aScWzajR45C29HyBaXZ8jXBwnh9A==}
