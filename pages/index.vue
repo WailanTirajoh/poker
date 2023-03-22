@@ -27,7 +27,7 @@ async function addNewRoom() {
       </h1>
     </div>
     <TransitionGroup name="list" tag="ul" class="grid gap-2 gap-y-8 grid-cols-[repeat(auto-fill,_minmax(14rem,_1fr))]">
-      <li>
+      <li key="1">
         <BaseOffcanvas position="bottom">
           <template #trigger>
             <button
@@ -68,13 +68,13 @@ async function addNewRoom() {
         </BaseOffcanvas>
       </li>
 
-      <li class="relative" v-for="room in rooms" :key="room.id">
+      <li class="relative transition-all ease-in-out hover:scale-110 hover:z-10" v-for="room in rooms" :key="room.id">
         <NuxtLink :to="`rooms/${room.id}`">
           <div class="absolute -top-5 w-full flex justify-center z-10">
-            <img :src="room.photoUrl" alt="" class="w-10 h-10 rounded-full object-cover">
+            <img v-if="room.photoUrl" :src="room.photoUrl" alt="" class="w-10 h-10 rounded-full object-cover">
           </div>
           <div
-            class="relative rounded-xl p-2 text-sm leading-6 transition bg-white shadow-[0_1px_3px_rgba(15,23,42,0.03),0_1px_2px_rgba(15,23,42,0.06)] ring-1 ring-slate-600/[0.04] h-36">
+            class="relative rounded-xl p-2 text-sm leading-6 transition bg-white shadow-[0_1px_3px_rgba(15,23,42,0.03),0_1px_2px_rgba(15,23,42,0.06)] hover:shadow-lg ring-1 ring-slate-600/[0.04] h-36">
             {{ room.name }}
           </div>
         </NuxtLink>

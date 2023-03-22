@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    layoutTransition: { name: 'page', mode: 'out-in' }
+  },
   modules: ["nuxt-vuefire", "@nuxtjs/tailwindcss"],
   css: ["~/assets/style.css"],
   vuefire: {
